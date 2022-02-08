@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    background-color: rgb(33, 3, 68);
+    color: white;
+    /* height: 8vh; */
+    border-radius: 34px;
+}
+
+.nav ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav ul li{
+    font-size: 1.8rem;
+    padding: 1vw;
+    margin-left: 2vw;
+}
+
+.container{
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.gameContainer{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    margin-right: 2vw;
+    position: relative;
+}
+
+.boxClass{
+    border: 2px solid rgb(73, 5, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxClass:hover{
+    background-color: rgb(234, 220, 248);
+}
+
+.box{
+    color: rgb(221, 15, 15);
+    font-size: 6vw;
+}
+
+.currentStatus{
+    margin-top: 2vh;
+}
+
+
+#Reset{
+    margin-left: 0.6vw;
+    padding: 6px;
+    background-color: rgb(247, 209, 247);
+    border-radius: 9px;
+}
+
+#imgBox img{
+    width: 0vw;
+    transition: 2s width ease-in-out;
+}
+
+.line{
+    background-color: #300866;
+    width: 0vw;
+    height: 6px;
+    position: absolute;
+    transition: 2s width ease-in-out;
+}
+
+
+
+/* Utility classes */
+
+.b-t{
+    border-top: 0;
+}
+
+.b-b{
+    border-bottom: 0;
+}
+
+.b-l{
+    border-left: 0;
+}
+
+.b-r{
+    border-right: 0;
+}
+
+h1{
+    color: rgb(11, 5, 34);
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 950px) {
+    .container {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    /* .boxClass{
+        height: 8vh;
+    } */
+
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+
+    .gameContainer { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .status{
+        margin-top: 4vh;
+    }
+
+
+  }
